@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Progress Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js Library -->
+</head>
+<body>
+
+    <div class="container">
+        <h1>⏳ Time Progress Tracker</h1>
+        <div class="datetime">
+            <p>Date: <span id="current-date"></span></p>
+            <p>Time: <span id="current-time"></span></p>
+        </div>
+
+        <div class="progress-sections">
+            <div class="progress-container">
+                <h3>Year Progress</h3>
+                <p><span id="year-progress-text"></span>%</p>
+                <div class="progress-bar">
+                    <div id="year-progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="progress-container">
+                <h3>Month Progress</h3>
+                <p><span id="month-progress-text"></span>%</p>
+                <div class="progress-bar">
+                    <div id="month-progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="progress-container">
+                <h3>Week Progress</h3>
+                <p><span id="week-progress-text"></span>%</p>
+                <div class="progress-bar">
+                    <div id="week-progress-fill"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="charts-container">
+            <div class="chart-wrapper">
+                <canvas id="yearChart"></canvas>
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="monthChart"></canvas>
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="weekChart"></canvas>
+            </div>
+            <div class="chart-wrapper wide">
+                <h3>Days Analysis</h3>
+                <canvas id="daysChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script> <!-- JavaScript File -->
+</body>
+</html>
